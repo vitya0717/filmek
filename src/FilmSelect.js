@@ -27,7 +27,7 @@ export const FilmSelect = ({ selectedFilm, setSelectedFilm }) => {
                     <div className='spinner-border text-danger' />
                 </div> :
                     <div key={selectedFilm.id} className="card m-3" style={{ width: '18rem' }}>
-                        <Link to={`/Filmek`}> <img src={selectedFilm.kepneve ? selectedFilm.kepneve : 'https://via.placeholder.com/200'} className="card-img-top p-3" alt="A film képe xd" /></Link>
+                        <Link to={`/Filmek`}> <img src={selectedFilm.kepneve ? process.env.PUBLIC_URL + '/' + selectedFilm.kepneve : 'https://via.placeholder.com/200'} className="card-img-top p-3" alt="A film képe xd" /></Link>
                         <div className="card-body d-flex flex-column">
                             <h5 className="card-title">{selectedFilm.nev}</h5>
                             <p className="card-text">Kiadás éve: {selectedFilm.kiadasEve}</p>

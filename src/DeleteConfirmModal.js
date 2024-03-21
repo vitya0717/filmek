@@ -15,7 +15,7 @@ export const DeleteConfirmModal = ({ selectedFilm, setFetchPending }) => {
                     <div className="modal-body">
                         A következő film lesz törölve:
                         <div key={selectedFilm.id} className="card m-3" style={{ width: '18rem' }}>
-                            <img src={selectedFilm.kepneve ? selectedFilm.kepneve : 'https://via.placeholder.com/200'} className="card-img-top p-3" alt="A film képe xd" />
+                            <img src={selectedFilm.kepneve ? process.env.PUBLIC_URL + '/' + selectedFilm.kepneve : 'https://via.placeholder.com/200'} className="card-img-top p-3" alt="A film képe xd" />
                             <div className="card-body d-flex flex-column">
                                 <h5 className="card-title">{selectedFilm.nev}</h5>
                                 <p className="card-text">Kiadás éve: {selectedFilm.kiadasEve}</p>

@@ -29,7 +29,7 @@ const Filmek = ({ filmek, setFilmek, setSelectedFilm, setFetchPending, isFetchPe
                         <div key={film.id} className="card m-3" style={{ width: '18rem' }}>
                             <Link onClick={() => {
                                 navigate(`/film/${film.id}`);
-                            }} to={`/film/${film.id}`}> <img src={film.kepneve ? film.kepneve : 'https://via.placeholder.com/200'} className="card-img-top p-3" alt="A film képe xd" /></Link>
+                            }} to={`/film/${film.id}`}> <img src={film.kepneve ? process.env.PUBLIC_URL + '/' +  film.kepneve : 'https://via.placeholder.com/200'} className="card-img-top p-3" alt="A film képe xd" /></Link>
                             <div className="card-body d-flex flex-column">
                                 <h5 className="card-title">{film.nev}</h5>
                                 <p className="card-text">Kiadás éve: {film.kiadasEve}</p>
